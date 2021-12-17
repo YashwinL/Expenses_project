@@ -1,7 +1,15 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpenses/NewExpenses";
+import ExpensesFilter from "./components/ExpensesFilter/ExpenseFilter";
 
 function App() {
+  //   return (
+  //     <div>
+  //       <h2>Let's get started!</h2>
+  //       <Expenses item={expenses}></Expenses>
+  //     </div>
+  //   );
+  // }
   const expenses = [
     {
       id: "e1",
@@ -23,17 +31,17 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  //   return (
-  //     <div>
-  //       <h2>Let's get started!</h2>
-  //       <Expenses item={expenses}></Expenses>
-  //     </div>
-  //   );
-  // }
+  const ExpenseinMain = (expensemain) => {
+    const MainData = {
+      ...expensemain,
+      id: Math.random().toString(),
+    };
+  };
 
   return (
     <div>
-      <NewExpenses />
+      <NewExpenses GettingMain={ExpenseinMain} />
+
       <Expenses items={expenses} />
     </div>
   );

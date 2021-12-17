@@ -2,9 +2,18 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import Card from "../UI/Card";
 import React from "react";
+import ExpensesFilter from "../ExpensesFilter/ExpenseFilter";
 const Expenses = (props) => {
+  const FilteredValues = (finalFilteredValues) => {
+    const ContainingFilter = {
+      year: finalFilteredValues,
+    };
+    console.log(ContainingFilter);
+  };
   return (
     <Card className="expenses">
+      <ExpensesFilter onFilteredvalues={FilteredValues} />
+
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}
