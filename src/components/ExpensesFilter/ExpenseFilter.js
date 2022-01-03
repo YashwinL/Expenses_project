@@ -9,11 +9,7 @@ const ExpensesFilter = (props) => {
     setEnteredYear(event.target.value);
   };
 
-  const yearvalue = {
-    year: EnteredYear,
-  };
-
-  props.onFilteredvalues(yearvalue);
+  props.onFilteredvalues(EnteredYear);
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
